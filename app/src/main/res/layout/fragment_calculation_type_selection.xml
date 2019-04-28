@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ScrollView android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/walls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/walls"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/walls"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_dark"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                android:layout_below="@id/walls"
+                android:layout_toLeftOf="@id/walls"
+                android:layout_marginTop="64dp"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/floor"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/floor"
+                android:layout_alignLeft="@id/floor"
+                android:layout_alignRight="@id/floor"
+                android:gravity="center_horizontal"/>
+
+            <Button
+                android:id="@+id/painting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_orange_dark"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                android:layout_below="@id/walls"
+                android:layout_toRightOf="@id/walls"
+                android:layout_marginTop="64dp"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/painting"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/painting"
+                android:layout_alignLeft="@id/painting"
+                android:layout_alignRight="@id/painting"
+                android:gravity="center_horizontal"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dream Builder</string>
+
+    <!-- Calculation Type Fragment -->
+    <string name="walls">Paredes</string>
+    <string name="floor">Piso</string>
+    <string name="painting">Pintura</string>
+</resources>
