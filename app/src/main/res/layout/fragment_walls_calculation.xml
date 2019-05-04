@@ -1,5 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/wall_image_length"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/colorPrimary"
+            android:scaleType="centerInside"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/wall_question_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="500dp"
+            android:textColor="@android:color/black"
+            android:text="@string/question_length"
+            android:textSize="16sp"
+            android:layout_alignTop="@id/wall_image_length"
+            android:layout_toRightOf="@id/wall_image_length"
+            android:layout_marginLeft="8dp"/>
+
+        <EditText
+            android:id="@+id/wall_answer_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/answer_hint"
+            android:layout_alignBottom="@id/wall_image_length"
+            android:layout_alignLeft="@id/wall_question_length"
+            android:layout_alignRight="@id/wall_question_length"/>
+
+        <ImageView
+            android:id="@+id/wall_image_width"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/colorPrimaryDark"
+            android:scaleType="centerInside"
+            android:layout_below="@id/wall_image_length"
+            android:layout_alignLeft="@id/wall_image_length"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/wall_question_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="500dp"
+            android:text="@string/question_width"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_alignTop="@id/wall_image_width"
+            android:layout_toRightOf="@id/wall_image_width"
+            android:layout_marginLeft="8dp"/>
+
+        <EditText
+            android:id="@+id/wall_answer_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/answer_hint"
+            android:layout_alignBottom="@id/wall_image_width"
+            android:layout_alignLeft="@id/wall_question_width"
+            android:layout_alignRight="@id/wall_question_length"/>
+
+        <ImageView
+            android:id="@+id/wall_image_height"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/colorAccent"
+            android:scaleType="centerInside"
+            android:layout_below="@id/wall_image_width"
+            android:layout_alignLeft="@id/wall_image_width"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/wall_question_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="500dp"
+            android:text="@string/question_height"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_alignTop="@id/wall_image_height"
+            android:layout_toRightOf="@id/wall_image_height"
+            android:layout_marginLeft="8dp"/>
+
+        <EditText
+            android:id="@+id/wall_answer_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/answer_hint"
+            android:layout_alignBottom="@id/wall_image_height"
+            android:layout_alignLeft="@id/wall_question_height"
+            android:layout_alignRight="@id/wall_question_length"/>
+
+        <Button
+            android:id="@+id/wall_next_button"
+            android:minHeight="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_button"
+            android:layout_below="@id/wall_image_height"
+            android:layout_alignLeft="@id/wall_image_height"
+            android:layout_alignRight="@id/wall_answer_height"
+            android:layout_marginTop="32dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

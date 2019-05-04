@@ -1,8 +1,25 @@
 <resources>
     <string name="app_name">Dream Builder</string>
 
-    <!-- Calculation Type Fragment -->
+    <!-- Calculation Type Selection Fragment -->
     <string name="walls">Paredes</string>
     <string name="floor">Piso</string>
     <string name="painting">Pintura</string>
+
+    <!-- Calculation fragments -->
+    <string name="question_height">Qual o valor do pé direito (altura)?</string>
+    <string name="question_length">Qual o comprimento da base da casa?</string>
+    <string name="question_width">Qual a largura da base da casa?</string>
+    <string name="answer_hint">Valor (em metros)</string>
+    <string name="next_button">Avançar</string>
+
+    <!-- Brick Selection Fragment -->
+    <string name="holes_brick_1">6 furos</string>
+    <string name="dimensions_brick_1">9cm x 14cm x 19cm</string>
+
+    <string name="holes_brick_2">8 furos</string>
+    <string name="dimensions_brick_2">9cm x 19cm x 19cm</string>
+
+    <string name="holes_brick_3">9 furos</string>
+    <string name="dimensions_brick_3">11,5cm x 14cm x 24cm</string>
 </resources>
