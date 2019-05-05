@@ -17,6 +17,8 @@ import com.westgoten.dreambuilder.R;
 public class CalculationTypeSelectionFragment extends Fragment {
     private FragmentManager fragmentManager;
 
+    public static String USER_INPUT = CalculationTypeSelectionFragment.class.getSimpleName() + ".USER_INPUT";
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

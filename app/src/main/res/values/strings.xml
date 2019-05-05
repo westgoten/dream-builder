@@ -7,13 +7,17 @@
     <string name="painting">Pintura</string>
 
     <!-- Calculation fragments -->
-    <string name="question_height">Qual o valor do pé direito (altura)?</string>
-    <string name="question_length">Qual o comprimento da base da casa?</string>
-    <string name="question_width">Qual a largura da base da casa?</string>
+    <string name="calculation_title">Informe as medidas da casa:</string>
+    <string name="question_height">Qual é o valor do pé direito (altura)?</string>
+    <string name="question_length">Qual é o comprimento da base?</string>
+    <string name="question_width">Qual é a largura da base?</string>
+    <string name="question_gap_area">Qual é a soma das áreas das aberturas?</string>
     <string name="answer_hint">Valor (em metros)</string>
     <string name="next_button">Avançar</string>
 
     <!-- Brick Selection Fragment -->
+    <string name="brick_selection_title">Escolha o tipo de tijolo:</string>
+
     <string name="holes_brick_1">6 furos</string>
     <string name="dimensions_brick_1">9cm x 14cm x 19cm</string>
 
@@ -22,4 +26,18 @@
 
     <string name="holes_brick_3">9 furos</string>
     <string name="dimensions_brick_3">11,5cm x 14cm x 24cm</string>
+    
+    <!-- Calculation Result Fragment -->
+    <string name="result_title">Materiais necessários</string>
+
+    <string name="result_bricks">Tijolos</string>
+    <string name="result_bricks_unit">%,d unidade(s)</string>
+    <string name="result_cement">Cimento</string>
+    <string name="result_cement_unit">%,d saco(s) de 50kg</string>
+    <string name="result_sand">Areia</string>
+    <string name="result_sand_unit">%,.1f litro(s)</string>
+
+    <!-- Add here -->
+
+    <string name="result_back_to_menu">Voltar ao menu</string>
 </resources>

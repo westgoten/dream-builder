@@ -8,6 +8,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/wall_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calculation_title"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
         <ImageView
             android:id="@+id/wall_image_length"
             android:minWidth="100dp"
@@ -16,8 +26,9 @@
             android:layout_height="wrap_content"
             android:src="@color/colorPrimary"
             android:scaleType="centerInside"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"/>
+            android:layout_below="@id/wall_title"
+            android:layout_alignLeft="@id/wall_title"
+            android:layout_marginTop="32dp"/>
 
         <TextView
             android:id="@+id/wall_question_length"
@@ -37,6 +48,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:hint="@string/answer_hint"
+            android:maxLength="50"
             android:layout_alignBottom="@id/wall_image_length"
             android:layout_alignLeft="@id/wall_question_length"
             android:layout_alignRight="@id/wall_question_length"/>
@@ -51,7 +63,7 @@
             android:scaleType="centerInside"
             android:layout_below="@id/wall_image_length"
             android:layout_alignLeft="@id/wall_image_length"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginTop="16dp"/>
 
         <TextView
             android:id="@+id/wall_question_width"
@@ -71,6 +83,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:hint="@string/answer_hint"
+            android:maxLength="50"
             android:layout_alignBottom="@id/wall_image_width"
             android:layout_alignLeft="@id/wall_question_width"
             android:layout_alignRight="@id/wall_question_length"/>
@@ -85,7 +98,7 @@
             android:scaleType="centerInside"
             android:layout_below="@id/wall_image_width"
             android:layout_alignLeft="@id/wall_image_width"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginTop="16dp"/>
 
         <TextView
             android:id="@+id/wall_question_height"
@@ -105,8 +118,44 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:hint="@string/answer_hint"
+            android:maxLength="50"
             android:layout_alignBottom="@id/wall_image_height"
             android:layout_alignLeft="@id/wall_question_height"
+            android:layout_alignRight="@id/wall_question_length"/>
+
+        <ImageView
+            android:id="@+id/wall_image_gap_area"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/colorAccent"
+            android:scaleType="centerInside"
+            android:layout_below="@id/wall_image_height"
+            android:layout_alignLeft="@id/wall_image_height"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/wall_question_gap_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="500dp"
+            android:text="@string/question_gap_area"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_alignTop="@id/wall_image_gap_area"
+            android:layout_toRightOf="@id/wall_image_gap_area"
+            android:layout_marginLeft="8dp"/>
+
+        <EditText
+            android:id="@+id/wall_answer_gap_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/answer_hint"
+            android:maxLength="50"
+            android:layout_alignBottom="@id/wall_image_gap_area"
+            android:layout_alignLeft="@id/wall_question_gap_area"
             android:layout_alignRight="@id/wall_question_length"/>
 
         <Button
@@ -115,10 +164,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next_button"
-            android:layout_below="@id/wall_image_height"
-            android:layout_alignLeft="@id/wall_image_height"
-            android:layout_alignRight="@id/wall_answer_height"
-            android:layout_marginTop="32dp"/>
+            android:layout_below="@id/wall_image_gap_area"
+            android:layout_alignLeft="@id/wall_image_gap_area"
+            android:layout_alignRight="@id/wall_answer_gap_area"
+            android:layout_marginTop="16dp"/>
 
     </RelativeLayout>
 
