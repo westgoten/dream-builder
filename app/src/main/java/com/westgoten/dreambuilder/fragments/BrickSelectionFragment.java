@@ -43,8 +43,8 @@ public class BrickSelectionFragment extends Fragment {
         brickOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                wallsCalculationData.bricks = (int) Math.ceil(38 * ((wallsCalculationData.totalLateralArea *
-                        wallsCalculationData.height) - wallsCalculationData.totalGapArea) * 1.1);
+                wallsCalculationData.bricks = (int) Math.ceil((37.59 * ((wallsCalculationData.totalWallsLength *
+                        wallsCalculationData.height) - wallsCalculationData.totalGapArea) * 1.1));
 
                 arguments.putSerializable(CalculationTypeSelectionFragment.USER_INPUT, wallsCalculationData);
                 calculationResultFragment.setArguments(arguments);
@@ -60,8 +60,8 @@ public class BrickSelectionFragment extends Fragment {
         brickTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                wallsCalculationData.bricks = (int) Math.ceil(28 * ((wallsCalculationData.totalLateralArea *
-                        wallsCalculationData.height) - wallsCalculationData.totalGapArea) * 1.1);
+                wallsCalculationData.bricks = (int) Math.ceil((27.7 * ((wallsCalculationData.totalWallsLength *
+                        wallsCalculationData.height) - wallsCalculationData.totalGapArea) * 1.1));
 
                 arguments.putSerializable(CalculationTypeSelectionFragment.USER_INPUT, wallsCalculationData);
                 calculationResultFragment.setArguments(arguments);
@@ -77,8 +77,8 @@ public class BrickSelectionFragment extends Fragment {
         brickThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                wallsCalculationData.bricks = (int) Math.ceil(30 * ((wallsCalculationData.totalLateralArea *
-                        wallsCalculationData.height) - wallsCalculationData.totalGapArea) * 1.1);
+                wallsCalculationData.bricks = (int) Math.ceil((29.76 * ((wallsCalculationData.totalWallsLength *
+                        wallsCalculationData.height) - wallsCalculationData.totalGapArea) * 1.1));
 
                 arguments.putSerializable(CalculationTypeSelectionFragment.USER_INPUT, wallsCalculationData);
                 calculationResultFragment.setArguments(arguments);

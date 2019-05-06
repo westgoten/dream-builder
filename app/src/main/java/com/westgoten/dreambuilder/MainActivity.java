@@ -1,6 +1,8 @@
 package com.westgoten.dreambuilder;
 
 import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
+            hideSoftKeyboard();
             fragmentManager.popBackStack();
             return true;
         }
@@ -55,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 actionBar.setDisplayHomeAsUpEnabled(false);
             }
+        }
+    }
+
+    private void hideSoftKeyboard() {
+        View view = getCurrentFocus();
+        if (view != null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            if (inputMethodManager != null)
+                inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
 }

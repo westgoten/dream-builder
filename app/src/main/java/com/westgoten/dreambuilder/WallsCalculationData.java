@@ -6,7 +6,7 @@ public class WallsCalculationData implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public double height;
-    public double totalLateralArea;
+    public double totalWallsLength;
     public double totalGapArea;
     public int bricks;
     public int cementBags;

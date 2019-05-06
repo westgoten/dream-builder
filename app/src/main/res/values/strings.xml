@@ -8,12 +8,16 @@
 
     <!-- Calculation fragments -->
     <string name="calculation_title">Informe as medidas da casa:</string>
+
     <string name="question_height">Qual é o valor do pé direito (altura)?</string>
-    <string name="question_length">Qual é o comprimento da base?</string>
-    <string name="question_width">Qual é a largura da base?</string>
+    <string name="question_wall_length">Qual é a soma do comprimento das paredes?</string>
     <string name="question_gap_area">Qual é a soma das áreas das aberturas?</string>
+
+    <!-- Add here -->
+
     <string name="answer_hint">Valor (em metros)</string>
     <string name="next_button">Avançar</string>
+    <string name="input_error">Necessário preencher</string>
 
     <!-- Brick Selection Fragment -->
     <string name="brick_selection_title">Escolha o tipo de tijolo:</string>
@@ -35,7 +39,7 @@
     <string name="result_cement">Cimento</string>
     <string name="result_cement_unit">%,d saco(s) de 50kg</string>
     <string name="result_sand">Areia</string>
-    <string name="result_sand_unit">%,.1f litro(s)</string>
+    <string name="result_sand_unit">%,.2f m3</string>
 
     <!-- Add here -->
 
