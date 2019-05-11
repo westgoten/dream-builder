@@ -13,10 +13,17 @@
     <string name="question_wall_length">Qual é a soma do comprimento das paredes?</string>
     <string name="question_gap_area">Qual é a soma das áreas das aberturas?</string>
 
+    <string name="house">Dimensões da casa</string>
+    <string name="tile">Dimensões da peça</string>
+    <string name="dimension_width">Largura</string>
+    <string name="dimension_length">Comprimento</string>
+    <string name="times">X</string>
+
     <!-- Add here -->
 
-    <string name="answer_hint">Valor (em metros)</string>
+    <string name="answer_hint">Valor (metros)</string>
     <string name="next_button">Avançar</string>
+    <string name="finish_button">Calcular</string>
     <string name="input_error">Necessário preencher</string>
 
     <!-- Brick Selection Fragment -->

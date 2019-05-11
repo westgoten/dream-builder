@@ -42,9 +42,9 @@ public class WallsCalculationFragment extends Fragment implements UserInputValid
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isUserInputEmpty()) {
-                    hideSoftKeyboard(v);
+                hideSoftKeyboard(v);
 
+                if (!isUserInputEmpty()) {
                     BrickSelectionFragment brickSelectionFragment = new BrickSelectionFragment();
 
                     WallsCalculationData wallsCalculationData = new WallsCalculationData();

@@ -43,7 +43,10 @@ public class CalculationTypeSelectionFragment extends Fragment {
         floor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Floor calculation
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, new FloorCalculationFragment())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 
