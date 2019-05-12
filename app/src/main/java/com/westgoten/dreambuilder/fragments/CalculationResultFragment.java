@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import com.westgoten.dreambuilder.FloorCalculationData;
 import com.westgoten.dreambuilder.R;
 import com.westgoten.dreambuilder.WallsCalculationData;
 
@@ -71,6 +72,18 @@ public class CalculationResultFragment extends Fragment {
             name2.setText(R.string.result_sand);
             value2.setText(String.format(getString(R.string.result_sand_unit), wallsCalculationData.sand));
             materialList.addView(items.get(2));
+
+        } else if (calculationData instanceof FloorCalculationData) {
+            FloorCalculationData floorCalculationData = (FloorCalculationData) calculationData;
+            imageView.setImageResource(android.R.color.holo_green_dark);
+
+            LinearLayout item = (LinearLayout) inflater.inflate(R.layout.result_item, materialList, false);
+            TextView name = (TextView) item.getChildAt(0);
+            TextView value = (TextView) item.getChildAt(1);
+
+            name.setText(getString(R.string.result_tiles));
+            value.setText(String.format(getString(R.string.result_tiles_unit), floorCalculationData.quantityOfTiles));
+            materialList.addView(item);
         }
 
         Button backToMenu = (Button) viewContainer.getChildAt(2);

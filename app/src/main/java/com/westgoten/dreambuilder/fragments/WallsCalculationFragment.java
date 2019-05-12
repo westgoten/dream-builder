@@ -95,9 +95,9 @@ public class WallsCalculationFragment extends Fragment implements UserInputValid
         return isEmpty;
     }
 
-    private void hideSoftKeyboard(View v) {
+    private void hideSoftKeyboard(View view) {
        InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
        if (inputMethodManager != null)
-           inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
+           inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 }

@@ -44,7 +44,7 @@ public class CalculationTypeSelectionFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, new FloorCalculationFragment())
+                        .replace(R.id.fragment_container, new FloorCalculationFragmentPage1())
                         .addToBackStack(null)
                         .commit();
             }

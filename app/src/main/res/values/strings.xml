@@ -18,6 +18,7 @@
     <string name="dimension_width">Largura</string>
     <string name="dimension_length">Comprimento</string>
     <string name="times">X</string>
+    <string name="add_footer">Adicionar rodapé</string>
 
     <!-- Add here -->
 
@@ -47,6 +48,9 @@
     <string name="result_cement_unit">%,d saco(s) de 50kg</string>
     <string name="result_sand">Areia</string>
     <string name="result_sand_unit">%,.2f m3</string>
+
+    <string name="result_tiles">Peças</string>
+    <string name="result_tiles_unit">%,d unidade(s)</string>
 
     <!-- Add here -->
 
