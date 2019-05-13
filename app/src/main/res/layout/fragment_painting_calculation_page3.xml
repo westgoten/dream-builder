@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="32dp"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/painting_image_height"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@color/colorAccent"
+            android:scaleType="centerInside"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/painting_question_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="500dp"
+            android:text="@string/question_height"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_alignTop="@id/painting_image_height"
+            android:layout_toRightOf="@id/painting_image_height"
+            android:layout_marginLeft="8dp"/>
+
+        <EditText
+            android:id="@+id/painting_answer_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/answer_hint"
+            android:maxLength="50"
+            android:layout_alignBottom="@id/painting_image_height"
+            android:layout_alignLeft="@id/painting_question_height"
+            android:layout_alignRight="@id/painting_question_height"/>
+
+        <Button
+            android:id="@+id/painting_finish_button"
+            android:minHeight="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finish_button"
+            android:layout_below="@id/painting_image_height"
+            android:layout_alignLeft="@id/painting_image_height"
+            android:layout_alignRight="@id/painting_answer_height"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

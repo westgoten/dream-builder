@@ -44,7 +44,7 @@ public class CalculationTypeSelectionFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 fragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, new FloorCalculationFragmentPage1())
+                        .replace(R.id.fragment_container, new FloorCalculationPage1Fragment())
                         .addToBackStack(null)
                         .commit();
             }
@@ -54,7 +54,10 @@ public class CalculationTypeSelectionFragment extends Fragment {
         painting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Painting calculation
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, new PaintingCalculationPage1Fragment())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 

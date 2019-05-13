@@ -21,7 +21,7 @@ import com.westgoten.dreambuilder.UserInputValidator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FloorCalculationFragmentPage1 extends Fragment implements UserInputValidator {
+public class FloorCalculationPage1Fragment extends Fragment implements UserInputValidator {
     private FragmentManager fragmentManager;
 
     private EditText houseWidthWidget;
@@ -49,17 +49,17 @@ public class FloorCalculationFragmentPage1 extends Fragment implements UserInput
             public void onClick(View v) {
                 hideSoftKeyboard(v);
 
-                if (!isUserInputEmpty()) {
+                if (isUserInputValid()) {
                     doCalculation();
 
                     Bundle arguments = new Bundle();
                     arguments.putSerializable(CalculationTypeSelectionFragment.USER_INPUT, floorCalculationData);
 
-                    FloorCalculationFragmentPage2 floorCalculationFragmentPage2 = new FloorCalculationFragmentPage2();
-                    floorCalculationFragmentPage2.setArguments(arguments);
+                    FloorCalculationPage2Fragment floorCalculationPage2Fragment = new FloorCalculationPage2Fragment();
+                    floorCalculationPage2Fragment.setArguments(arguments);
 
                     fragmentManager.beginTransaction()
-                            .replace(R.id.fragment_container, floorCalculationFragmentPage2)
+                            .replace(R.id.fragment_container, floorCalculationPage2Fragment)
                             .addToBackStack(null)
                             .commit();
                 }
@@ -81,6 +81,24 @@ public class FloorCalculationFragmentPage1 extends Fragment implements UserInput
         }
 
         return isEmpty;
+    }
+
+    @Override
+    public boolean isUserInputValid() {
+        boolean isValid = true;
+
+        if (!isUserInputEmpty()) {
+            for (EditText editText : inputFields) {
+                if (Double.parseDouble(editText.getText().toString()) == 0.0) {
+                    isValid = false;
+                    editText.setError(getString(R.string.input_error_division_by_zero));
+                }
+            }
+        } else {
+            isValid = false;
+        }
+
+        return isValid;
     }
 
     private void doCalculation() {

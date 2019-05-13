@@ -18,7 +18,7 @@ import com.westgoten.dreambuilder.UserInputValidator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FloorCalculationFragmentPage2 extends Fragment implements UserInputValidator {
+public class FloorCalculationPage2Fragment extends Fragment implements UserInputValidator {
     private FragmentManager fragmentManager;
     private Bundle arguments;
 
@@ -56,7 +56,7 @@ public class FloorCalculationFragmentPage2 extends Fragment implements UserInput
             public void onClick(View v) {
                 hideSoftKeyboard(v);
 
-                if (!isUserInputEmpty()) {
+                if (isUserInputValid()) {
                     doCalculation();
 
                     CalculationResultFragment calculationResultFragment = new CalculationResultFragment();
@@ -85,6 +85,24 @@ public class FloorCalculationFragmentPage2 extends Fragment implements UserInput
         }
 
         return isEmpty;
+    }
+
+    @Override
+    public boolean isUserInputValid() {
+        boolean isValid = true;
+
+        if (!isUserInputEmpty()) {
+            for (EditText editText : inputFields) {
+                if (Double.parseDouble(editText.getText().toString()) == 0.0) {
+                    isValid = false;
+                    editText.setError(getString(R.string.input_error_division_by_zero));
+                }
+            }
+        } else {
+            isValid = false;
+        }
+
+        return isValid;
     }
 
     private void doCalculation() {

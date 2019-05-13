@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.westgoten.dreambuilder.FloorCalculationData;
+import com.westgoten.dreambuilder.PaintingCalculationData;
 import com.westgoten.dreambuilder.R;
 import com.westgoten.dreambuilder.WallsCalculationData;
 
@@ -83,6 +84,18 @@ public class CalculationResultFragment extends Fragment {
 
             name.setText(getString(R.string.result_tiles));
             value.setText(String.format(getString(R.string.result_tiles_unit), floorCalculationData.quantityOfTiles));
+            materialList.addView(item);
+
+        } else if (calculationData instanceof PaintingCalculationData) {
+            PaintingCalculationData paintingCalculationData = (PaintingCalculationData) calculationData;
+            imageView.setImageResource(android.R.color.holo_orange_dark);
+
+            LinearLayout item = (LinearLayout) inflater.inflate(R.layout.result_item, materialList, false);
+            TextView name = (TextView) item.getChildAt(0);
+            TextView value = (TextView) item.getChildAt(1);
+
+            name.setText(getString(R.string.result_paint));
+            value.setText(String.format(getString(R.string.result_paint_unit), paintingCalculationData.quantityOfBuckets));
             materialList.addView(item);
         }
 

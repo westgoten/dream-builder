@@ -44,7 +44,7 @@ public class WallsCalculationFragment extends Fragment implements UserInputValid
             public void onClick(View v) {
                 hideSoftKeyboard(v);
 
-                if (!isUserInputEmpty()) {
+                if (isUserInputValid()) {
                     BrickSelectionFragment brickSelectionFragment = new BrickSelectionFragment();
 
                     WallsCalculationData wallsCalculationData = new WallsCalculationData();
@@ -93,6 +93,11 @@ public class WallsCalculationFragment extends Fragment implements UserInputValid
         }
 
         return isEmpty;
+    }
+
+    @Override
+    public boolean isUserInputValid() {
+        return !isUserInputEmpty();
     }
 
     private void hideSoftKeyboard(View view) {

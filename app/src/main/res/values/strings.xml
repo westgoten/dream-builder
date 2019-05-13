@@ -9,9 +9,9 @@
     <!-- Calculation fragments -->
     <string name="calculation_title">Informe as medidas da casa:</string>
 
-    <string name="question_height">Qual é o valor do pé direito (altura)?</string>
-    <string name="question_wall_length">Qual é a soma do comprimento das paredes?</string>
-    <string name="question_gap_area">Qual é a soma das áreas das aberturas?</string>
+    <string name="question_height">Qual é o valor do pé direito (altura) da casa?</string>
+    <string name="question_wall_length">Qual é a soma do comprimento das paredes da casa?</string>
+    <string name="question_gap_area">Qual é a soma das áreas das aberturas das paredes?</string>
 
     <string name="house">Dimensões da casa</string>
     <string name="tile">Dimensões da peça</string>
@@ -19,13 +19,19 @@
     <string name="dimension_length">Comprimento</string>
     <string name="times">X</string>
     <string name="add_footer">Adicionar rodapé</string>
-
-    <!-- Add here -->
+    
+    <string name="paint_efficiency_title">Rendimento da tinta</string>
+    <string name="paint_efficiency_value">Valor:</string>
+    <string name="paint_efficiency_unit">Unidade:</string>
+    <string name="paint_efficiency_m2L">m²/L</string>
+    <string name="paint_efficiency_m2D">m²/demão</string>
+    <string name="paint_bucket_volume">Volume da lata de tinta (L)</string>
 
     <string name="answer_hint">Valor (metros)</string>
     <string name="next_button">Avançar</string>
     <string name="finish_button">Calcular</string>
     <string name="input_error">Necessário preencher</string>
+    <string name="input_error_division_by_zero">Valor inválido</string>
 
     <!-- Brick Selection Fragment -->
     <string name="brick_selection_title">Escolha o tipo de tijolo:</string>
@@ -47,12 +53,13 @@
     <string name="result_cement">Cimento</string>
     <string name="result_cement_unit">%,d saco(s) de 50kg</string>
     <string name="result_sand">Areia</string>
-    <string name="result_sand_unit">%,.2f m3</string>
+    <string name="result_sand_unit">%,.2f m³</string>
 
     <string name="result_tiles">Peças</string>
     <string name="result_tiles_unit">%,d unidade(s)</string>
 
-    <!-- Add here -->
+    <string name="result_paint">Tinta</string>
+    <string name="result_paint_unit">%,d lata(s)</string>
 
     <string name="result_back_to_menu">Voltar ao menu</string>
 </resources>
