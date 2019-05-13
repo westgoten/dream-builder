@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.westgoten.dreambuilder.R;
@@ -30,15 +31,16 @@ public class WallsCalculationFragment extends Fragment implements UserInputValid
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         fragmentManager = getFragmentManager();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.walls);
 
         ScrollView rootView = (ScrollView) inflater.inflate(R.layout.fragment_walls_calculation, container, false);
         RelativeLayout viewContainer = (RelativeLayout) rootView.getChildAt(0);
 
-        wallsLengthWidget = (EditText) viewContainer.getChildAt(3);
-        heightWidget = (EditText) viewContainer.getChildAt(6);
-        gapAreaWidget = (EditText) viewContainer.getChildAt(9);
+        wallsLengthWidget = (EditText) viewContainer.getChildAt(2);
+        heightWidget = (EditText) viewContainer.getChildAt(5);
+        gapAreaWidget = (EditText) viewContainer.getChildAt(8);
 
-        Button nextButton = (Button) viewContainer.getChildAt(10);
+        Button nextButton = (Button) viewContainer.getChildAt(9);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

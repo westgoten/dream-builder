@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -34,12 +35,14 @@ public class BrickSelectionFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         fragmentManager = getFragmentManager();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.walls);
+
         calculationResultFragment = new CalculationResultFragment();
 
         ScrollView rootView = (ScrollView) inflater.inflate(R.layout.fragment_brick_selection, container, false);
         LinearLayout viewContainer = (LinearLayout) rootView.getChildAt(0);
 
-        CardView brickOne = (CardView) viewContainer.getChildAt(1);
+        CardView brickOne = (CardView) viewContainer.getChildAt(2);
         brickOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +59,7 @@ public class BrickSelectionFragment extends Fragment {
             }
         });
 
-        CardView brickTwo = (CardView) viewContainer.getChildAt(2);
+        CardView brickTwo = (CardView) viewContainer.getChildAt(3);
         brickTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +76,7 @@ public class BrickSelectionFragment extends Fragment {
             }
         });
 
-        CardView brickThree = (CardView) viewContainer.getChildAt(3);
+        CardView brickThree = (CardView) viewContainer.getChildAt(4);
         brickThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

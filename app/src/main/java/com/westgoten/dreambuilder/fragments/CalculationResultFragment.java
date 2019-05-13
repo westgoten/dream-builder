@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -40,14 +41,16 @@ public class CalculationResultFragment extends Fragment {
 
         ScrollView rootView = (ScrollView) inflater.inflate(R.layout.fragment_calculation_result, container, false);
         LinearLayout viewContainer = (LinearLayout) rootView.getChildAt(0);
-        ImageView imageView = (ImageView) viewContainer.getChildAt(0);
+        TextView image = (TextView) viewContainer.getChildAt(0);
 
         CardView materialListContainer = (CardView) viewContainer.getChildAt(1);
         LinearLayout materialList = (LinearLayout) materialListContainer.getChildAt(0);
 
         if (calculationData instanceof WallsCalculationData) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.walls);
+
             WallsCalculationData wallsCalculationData = (WallsCalculationData) calculationData;
-            imageView.setImageResource(android.R.color.holo_blue_dark);
+            image.setBackgroundResource(R.drawable.wall_calculation);
 
             List<LinearLayout> items = new ArrayList<>();
             for (int i = 0; i < 3; i++)
@@ -75,8 +78,10 @@ public class CalculationResultFragment extends Fragment {
             materialList.addView(items.get(2));
 
         } else if (calculationData instanceof FloorCalculationData) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.floor);
+
             FloorCalculationData floorCalculationData = (FloorCalculationData) calculationData;
-            imageView.setImageResource(android.R.color.holo_green_dark);
+            image.setBackgroundResource(R.drawable.floor_calculation);
 
             LinearLayout item = (LinearLayout) inflater.inflate(R.layout.result_item, materialList, false);
             TextView name = (TextView) item.getChildAt(0);
@@ -87,8 +92,10 @@ public class CalculationResultFragment extends Fragment {
             materialList.addView(item);
 
         } else if (calculationData instanceof PaintingCalculationData) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.painting);
+
             PaintingCalculationData paintingCalculationData = (PaintingCalculationData) calculationData;
-            imageView.setImageResource(android.R.color.holo_orange_dark);
+            image.setBackgroundResource(R.drawable.painting_calculation);
 
             LinearLayout item = (LinearLayout) inflater.inflate(R.layout.result_item, materialList, false);
             TextView name = (TextView) item.getChildAt(0);

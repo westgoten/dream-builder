@@ -2,10 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="32dp"
+    android:padding="16dp"
     android:scrollbars="none">
 
     <RelativeLayout
@@ -15,11 +12,9 @@
 
         <ImageView
             android:id="@+id/painting_image_wall_length"
-            android:minWidth="100dp"
-            android:minHeight="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@color/colorPrimaryDark"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/wall_length_icon"
             android:scaleType="centerInside"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true" />
@@ -49,11 +44,9 @@
 
         <ImageView
             android:id="@+id/painting_image_gap_area"
-            android:minWidth="100dp"
-            android:minHeight="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@color/colorAccent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/gap_area_icon"
             android:scaleType="centerInside"
             android:layout_below="@id/painting_image_wall_length"
             android:layout_alignLeft="@id/painting_image_wall_length"
@@ -88,6 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next_button"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_below="@id/painting_image_gap_area"
             android:layout_alignLeft="@id/painting_image_gap_area"
             android:layout_alignRight="@id/painting_answer_gap_area"

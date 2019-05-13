@@ -15,11 +15,9 @@
 
         <ImageView
             android:id="@+id/floor_image_tile"
-            android:minWidth="100dp"
-            android:minHeight="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@color/colorAccent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/tile"
             android:scaleType="centerInside"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true" />
@@ -108,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/finish_button"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_below="@id/add_footer"
             android:layout_alignLeft="@id/floor_answer_tile_width"
             android:layout_alignRight="@id/floor_answer_tile_length"

@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
     android:scrollbars="none"
     tools:context=".MainActivity">
 
@@ -18,13 +21,24 @@
             android:text="@string/brick_selection_title"
             android:textSize="16sp"
             android:textColor="@android:color/black"
-            android:layout_marginBottom="32dp"/>
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/brick_selection_dimensions"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/brick_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -34,12 +48,10 @@
 
                 <!-- Use drawableLeft later -->
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minWidth="100dp"
-                    android:minHeight="100dp"
-                    android:src="@android:color/holo_purple"
-                    android:scaleType="centerInside"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/lajota6furos9x14x19"
+                    android:scaleType="centerCrop"
                     android:layout_marginRight="8dp"/>
 
                 <LinearLayout
@@ -73,7 +85,9 @@
             android:id="@+id/brick_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -83,12 +97,10 @@
 
                 <!-- Use drawableLeft later -->
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minWidth="100dp"
-                    android:minHeight="100dp"
-                    android:src="@android:color/black"
-                    android:scaleType="centerInside"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/lajotade8furos9x19x19"
+                    android:scaleType="centerCrop"
                     android:layout_marginRight="8dp"/>
 
                 <LinearLayout
@@ -122,7 +134,9 @@
             android:id="@+id/brick_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -132,12 +146,10 @@
 
                 <!-- Use drawableLeft later -->
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minWidth="100dp"
-                    android:minHeight="100dp"
-                    android:src="@android:color/holo_red_light"
-                    android:scaleType="centerInside"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/tijolo115x14x24"
+                    android:scaleType="centerCrop"
                     android:layout_marginRight="8dp"/>
 
                 <LinearLayout

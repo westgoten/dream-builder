@@ -16,11 +16,9 @@
 
             <Button
                 android:id="@+id/walls"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_blue_dark"
-                android:minWidth="100dp"
-                android:minHeight="100dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/wall_calculation"
                 android:layout_centerHorizontal="true"/>
 
             <TextView
@@ -29,15 +27,14 @@
                 android:text="@string/walls"
                 android:textColor="@android:color/black"
                 android:layout_below="@id/walls"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"/>
 
             <Button
                 android:id="@+id/floor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_dark"
-                android:minWidth="100dp"
-                android:minHeight="100dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/floor_calculation"
                 android:layout_below="@id/walls"
                 android:layout_toLeftOf="@id/walls"
                 android:layout_marginTop="64dp"
@@ -51,15 +48,14 @@
                 android:layout_below="@id/floor"
                 android:layout_alignLeft="@id/floor"
                 android:layout_alignRight="@id/floor"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp"/>
 
             <Button
                 android:id="@+id/painting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/holo_orange_dark"
-                android:minWidth="100dp"
-                android:minHeight="100dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/painting_calculation"
                 android:layout_below="@id/walls"
                 android:layout_toRightOf="@id/walls"
                 android:layout_marginTop="64dp"
@@ -73,7 +69,8 @@
                 android:layout_below="@id/painting"
                 android:layout_alignLeft="@id/painting"
                 android:layout_alignRight="@id/painting"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:layout_marginTop="8dp"/>
 
         </RelativeLayout>
 

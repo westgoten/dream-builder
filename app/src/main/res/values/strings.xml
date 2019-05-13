@@ -7,8 +7,6 @@
     <string name="painting">Pintura</string>
 
     <!-- Calculation fragments -->
-    <string name="calculation_title">Informe as medidas da casa:</string>
-
     <string name="question_height">Qual é o valor do pé direito (altura) da casa?</string>
     <string name="question_wall_length">Qual é a soma do comprimento das paredes da casa?</string>
     <string name="question_gap_area">Qual é a soma das áreas das aberturas das paredes?</string>
@@ -35,6 +33,7 @@
 
     <!-- Brick Selection Fragment -->
     <string name="brick_selection_title">Escolha o tipo de tijolo:</string>
+    <string name="brick_selection_dimensions">Largura x Altura x Comprimento</string>
 
     <string name="holes_brick_1">6 furos</string>
     <string name="dimensions_brick_1">9cm x 14cm x 19cm</string>

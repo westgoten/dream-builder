@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import com.westgoten.dreambuilder.PaintingCalculationData;
@@ -35,6 +36,7 @@ public class PaintingCalculationPage3Fragment extends Fragment implements UserIn
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         fragmentManager = getFragmentManager();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.painting);
 
         ScrollView rootView = (ScrollView) inflater.inflate(R.layout.fragment_painting_calculation_page3, container, false);
         RelativeLayout viewContainer = (RelativeLayout) rootView.getChildAt(0);
