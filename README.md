@@ -2,8 +2,7 @@
 
 ![allscreens](screenshots/allscreens.png)
 
-**About the project**
-
+## About the project
 Dream Builder was created to help architects, engineers and non-technical people
 to better estimate the amount of supplies needed to build a house or any other type
 of building. It enables the users to reduce material waste and save time.
